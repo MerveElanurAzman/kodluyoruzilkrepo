@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobilerim</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS ile resim boyutları ve yan yana sıralama ayarlanıyor */
+        img {
+            width: 100%; /* Resmin genişliği %100 */
+            height: auto; /* Resmin oranına göre otomatik olarak yükseklik ayarlanıyor */
+            margin-bottom: 10px; /* Resimler arasına boşluk bırakmak için */
+        }
+
+        /* CSS flexbox kullanarak resimleri yan yana sıralama */
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Boşluğu en iyi şekilde dağıtmak için */
+            padding: 0; /* Ul etiketinin varsayılan padding'ini kaldırmak için */
+            list-style: none; /* Ul etiketinin varsayılan list-style'ını kaldırmak için */
+        }
+
+        li {
+            width: calc(33.33% - 10px); /* Her resmin genişliği %33.33 ve aralarında 10px boşluk */
+            box-sizing: border-box; /* Border ve padding hesaplamalarını içeriğin genişliğine dahil etmek için */
+            margin-bottom: 10px; /* Her resim altında 10px boşluk bırakmak için */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>İletişim</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                <li><a href="hobilerim.html">Hobilerim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <ol>
+            <li>
+                favori Filmlerim:
+                <ul>
+                    <li> 
+                        
+                        Alice in Wonderland 
+                        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftr.wikipedia.org%2Fwiki%2FAlis_Harikalar_Diyar%25C4%25B1nda_%2528film%2C_2010%2529&psig=AOvVaw3BX0fWFQytOk6eJK3dxOuG&ust=1699866648670000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNC6p_GOvoIDFQAAAAAdAAAAABAE" alt="alice in wonderland ">
+                    </li>
+                    <li>
+                        Caribbean Pirates
+                        <img src="https://donanimarsivi.com/wp-content/uploads/2022/06/jack-sparrow-1.jpg" alt="caribbean pirates">
+                    </li>
+                    <li>
+                        Harry Potter
+                        <img src="https://upload.wikimedia.org/wikipedia/tr/thumb/6/61/HarryPotterOotP.jpg/330px-HarryPotterOotP.jpg" alt="HarryPotter ">
+                    </li>
+                </ul>
+            </li>
+        
+            <li>
+                favori Dizilerim: 
+                <ul>
+                    <li> 
+                        <a href="https://www.imdb.com/title/tt7920978/" target="_blank">
+                        Şahsiyet</a>
+                        <img src="https://upload.wikimedia.org/wikipedia/tr/thumb/7/7a/%C5%9Eahsiyet_Dizi_Afi%C5%9Fi.jpg/375px-%C5%9Eahsiyet_Dizi_Afi%C5%9Fi.jpg" alt="Şahsiyet ">
+                    </li>
+                    <li>
+                        How I Meet Your Mother
+                        <img src="https://www.indyturk.com/sites/default/files/styles/1368x911/public/article/main_image/2021/05/18/665101-1003371114.jpg?itok=jPs9uRB_" alt="HIMYM ">
+                    </li>
+                    <li>
+                        Brooklyn Nine-Nine
+                        <img src="https://seyler.ekstat.com/img/max/800/G/GnJ19tWZFqLeU26Z-637310261484368694.jpg" alt="Brooklyn Nine-Nine">
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+</body>
+</html>
