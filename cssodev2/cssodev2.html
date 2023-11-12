@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google - 1998</title>
+    <!-- Sayfa üzerinde stil kullanmayacağımız için harici bir CSS dosyası eklemiyoruz -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #header {
+            padding: 15px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #logo {
+            width: 272px;
+            height: 92px;
+            margin: 0 auto;
+        }
+
+        #content {
+            margin: 50px auto;
+        }
+
+        #search-box {
+            width: 600px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        #search-btn {
+            padding: 10px 15px;
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #links {
+            color: #1a0dab;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img id="logo" src="google-logo.png" alt="Google Logo">
+    </div>
+
+    <div id="content">
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" id="search-box" name="q" placeholder="Google'da Ara">
+            <br>
+            <input type="submit" id="search-btn" value="Google'da Ara">
+        </form>
+
+        <div id="links">
+            <a href="#">Google Hakkında</a> - 
+            <a href="#">Gizlilik</a> - 
+            <a href="#">Şartlar</a>
+        </div>
+    </div>
+</body>
+</html>
