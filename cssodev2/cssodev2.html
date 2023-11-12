@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google - 1998</title>
-    <!-- Sayfa üzerinde stil kullanmayacağımız için harici bir CSS dosyası eklemiyoruz -->
+    
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -30,46 +30,161 @@
             margin: 50px auto;
         }
 
-        #search-box {
+        #search-box-container {
+            position: relative;
             width: 600px;
+            margin: 0 auto;
+        }
+
+        #search-box {
+            width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            margin-bottom: 20px;
+            text-align: left;
+            outline: none;
         }
 
         #search-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             padding: 10px 15px;
-            background-color: #4285f4;
-            color: #fff;
-            border: none;
+            border: 1px solid #4285f4;
             border-radius: 5px;
             cursor: pointer;
         }
 
-        #links {
-            color: #1a0dab;
+        #buttons-container {
+            display: flex;
+            justify-content: center;
             margin-top: 20px;
+        }
+
+        .action-btn {
+            padding: 10px 15px;
+            border: 1px solid #4285f4;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        #search-info {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        #blue-rectangles {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #4285f4;
+            color: #fff;
+        }
+
+        .blue-rectangle {
+            flex: 0 0 30%;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .blue-rectangle a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        #subscribe-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #email-input {
+            padding: 10px;
+            border: 1px solid #4285f4;
+            border-radius: 5px;
+            width: 60%;
+            margin-bottom: 10px;
+        }
+
+        #subscribe-btn {
+            padding: 10px 15px;
+            background-color: #fff;
+            color: #4285f4;
+            border: 1px solid #4285f4;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #archive {
+            color: #4285f4;
+            text-decoration: underline;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        #links {
+            display: none;
         }
     </style>
 </head>
 <body>
     <div id="header">
-        <img id="logo" src="google-logo.png" alt="Google Logo">
+        <img id="logo" src="https://web.archive.org/web/19990504112211im_/http://www.google.com/google.jpg" alt="Google Logo">
+        <div id="search-info">Search the web using Google!</div>
     </div>
 
     <div id="content">
-        <form action="https://www.google.com/search" method="GET">
-            <input type="text" id="search-box" name="q" placeholder="Google'da Ara">
-            <br>
-            <input type="submit" id="search-btn" value="Google'da Ara">
+        <form action="https://www.google.com/search" method="GET" id="search-form">
+            <div id="search-box-container">
+                <input type="text" id="search-box" name="q" placeholder="Google'da Ara">
+                <button type="submit" id="search-btn"></button>
+            </div>
         </form>
 
-        <div id="links">
-            <a href="#">Google Hakkında</a> - 
-            <a href="#">Gizlilik</a> - 
-            <a href="#">Şartlar</a>
+        <div id="buttons-container">
+            <button class="action-btn">Google Search</button>
+            <button class="action-btn">I'm Feeling Lucky</button>
+        </div>
+
+        <div id="blue-rectangles">
+            <div class="blue-rectangle">
+                <p><a href="#">Special Searches</a></p>
+                <p><a href="#">Stanford Search</a></p>
+                <p><a href="#">Linux Search</a></p>
+            </div>
+            <div class="blue-rectangle">
+                <p><a href="#">Help!</a></p>
+                <p><a href="#">About Google!</a></p>
+                <p><a href="#">Company Info</a></p>
+                <p><a href="#">Google! Logos</a></p>
+            </div>
+            <div class="blue-rectangle">
+                <p>Get Google!</p>
+                    <p> Updates monthly.</p>
+                <div id="subscribe-container">
+                    <input type="text" id="email-input" placeholder="Your E-mail">
+                    <button type="button" id="subscribe-btn">Subscribe</button>
+                    <span id="archive">Archive</span>
+                </div>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; Copy right 1998 Google Inc.</p>
+    </footer>
 </body>
 </html>
